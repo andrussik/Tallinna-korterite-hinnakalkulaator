@@ -1,1 +1,1 @@
-# kinnisvara-hinnakalkulaator
+# Tallinna-korterite-hinnakalkulaator
