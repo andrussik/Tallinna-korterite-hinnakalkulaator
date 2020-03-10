@@ -1,0 +1,40 @@
+<div class="container-fluid h-100 m-0 p-0">
+    <div class="row justify-content-center w-100 h-100">
+        <div class="col-7 col-sm-6 col-md-5 col-lg-5 text-left mt-5" id="main-div" style="padding: 0">
+            <table class="table table-striped mt-1 mb-1">
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="result-text align-middle">Sinu korteri ligikaudne hind: {{ content.prediction }} €</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="result-text align-middle">{{ content.district }} aritm. keskmine: {{ content.district_mean }} €</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="result-text align-middle">{{ content.district }} mediaan: {{ content.district_median }} €</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="result-text align-middle">Tallinna aritm. keskmine: {{ content.tln_mean }} €</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="result-text align-middle">Tallinna mediaan: {{ content.tln_median }} €</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="result-text align-middle go-back"><a href="/index">Mine tagasi</a></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
