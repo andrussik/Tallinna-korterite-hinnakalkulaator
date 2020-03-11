@@ -1,12 +1,11 @@
 <div class="container-fluid h-100 m-0 p-0">
     <div class="row justify-content-center w-100 h-100">
         <div class="col-7 col-sm-6 col-md-5 col-lg-5 text-left mt-5" id="main-div">
-            <form method="post" action="/result">
+            <form method="post" action="/result" class="needs-validation" novalidate>
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="linnaosa">Linnaosa</label>
-                        <select id="linnaosa" name="district" class="form-control">
-                            <option selected>Vali...</option>
+                        <select id="linnaosa" name="district" class="form-control" required>
                             <option>Haabersti</option>
                             <option>Kadriorg</option>
                             <option>Kesklinn</option>
@@ -18,38 +17,53 @@
                             <option>Põhja-Tallinn</option>
                             <option>Vanalinn</option>
                         </select>
+                        <div class="invalid-feedback">
+                            Palun vali linnaosa!
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="pind">Pind</label>
-                        <input type="number" class="form-control" id="pind" name="area" placeholder="nt: 75">
+                        <label for="kogupind">Kogupind m<sup>2</sup></label>
+                        <input type="number" min="5" max="750" class="form-control" id="kogupind" name="area" placeholder="nt: 75" required>
+                        <div class="invalid-feedback">
+                            Palun sisesta kogupind vahemikus 5-750!
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="tubade-arv">Tubade arv</label>
-                        <input type="number" class="form-control" id="tubade-arv" name="rooms"
-                            placeholder="nt: 4">
+                        <input type="number" min="1" max="20" class="form-control" id="tubade-arv" name="rooms" placeholder="nt: 4" required>
+                        <div class="invalid-feedback">
+                            Palun sisesta tubade arv vahemikus 1-20!
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="hoone-korruseid">Hoone korruste arv</label>
-                        <input type="text" class="form-control" id="hoone-korruseid" name="total_floors" placeholder="nt: 2">
+                        <input type="number" min="1" max="35" class="form-control" id="hoone-korruseid" name="total_floors" placeholder="nt: 2" required>
+                        <div class="invalid-feedback">
+                            Palun sisesta hoone korruste arv vahemikus 1-35!
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="ehitusaasta">Ehitusaasta</label>
-                        <input type="number" class="form-control" id="ehitusaasta" name="year_built" placeholder="nt: 1990">
+                        <input type="number" min="1000" max="2020" class="form-control" id="ehitusaasta" name="year_built" placeholder="nt: 1990" required>
+                        <div class="invalid-feedback">
+                            Palun sisesta ehitusaasta vahemikus 1000-2020!
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="hoone-materjal">Hoone materjal</label>
-                        <select id="hoone-materjal" name="material" class="form-control">
-                            <option selected>Vali...</option>
+                        <select id="hoone-materjal" name="material" class="form-control" required>
                             <option>Kivimaja</option>
                             <option>Puitmaja</option>
                             <option>Paneelmaja</option>
                             <option>Palkmaja</option>
                         </select>
+                        <div class="invalid-feedback">
+                            Palun vali hoone materjal!
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="seisukord">Seisukord</label>
-                        <select id="seisukord" name="condition" class="form-control">
-                            <option selected>Vali...</option>
+                        <select id="seisukord" name="condition" class="form-control" required>
                             <option>Uusarendus</option>
                             <option>Uus</option>
                             <option>Heas korras</option>
@@ -59,6 +73,9 @@
                             <option>Vajab san. remonti</option>
                             <option>Vajab renoveerimist</option>
                         </select>
+                        <div class="invalid-feedback">
+                            Palun vali seisukord!
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -69,3 +86,5 @@
         </div>
     </div>
 </div>
+
+<script src="/static/js/validation.js"></script>

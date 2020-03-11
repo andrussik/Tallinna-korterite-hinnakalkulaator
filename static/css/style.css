@@ -78,3 +78,13 @@ h4 {
     font-size:calc(8px + 1.5vw);
     margin: 0;
 }
+
+.was-validated .form-control:invalid  {
+    background-image: none;
+    padding: .375rem .75rem
+}
+
+.was-validated .form-control:valid {
+    background-image: none;
+    padding: .375rem .75rem
+}
